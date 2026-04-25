@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- زر الوضع الليلي -->
+  <div class="toggle-mode" onclick="toggleDark()">🌙 / ☀️</div>
+
+  <!-- صندوق تسجيل الدخول -->
+  <div class="container">
+    <h2>تسجيل الدخول</h2>
+
+    <form onsubmit="login(event)">
+      <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+      <input type="password" id="password" placeholder="كلمة المرور" required>
+
+      <button type="submit">دخول</button>
+    </form>
+
+    <p id="msg"></p>
+
+    <a href="#">نسيت كلمة المرور؟</a>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    function login(event) {
+      event.preventDefault();
+
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+      let msg = document.getElementById("msg");
+
+      if (email === "admin@gmail.com" && password === "1234") {
+        msg.style.color = "lightgreen";
+        msg.textContent = "✔ تسجيل دخول ناجح";
+      } else {
+        msg.style.color = "red";
+        msg.textContent = "✖ خطأ في المعلومات";
+      }
+    }
+
+    function toggleDark() {
+      document.body.classList.toggle("dark");
+    }
+  </script>
+
+</body>
+</html>
