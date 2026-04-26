@@ -1,1 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>اتصل بنا</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial;
+            direction: rtl;
+            text-align: center;
+            background-color: #f5f5f5;
+        }
 
+        .container {
+            width: 50%;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            margin-top: 50px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        input, textarea {
+            width: 90%;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>📞 اتصل بنا</h2>
+
+    <form action="contact.php" method="POST">
+        <input type="text" name="name" placeholder="الاسم" required><br>
+        
+        <input type="email" name="email" placeholder="البريد الإلكتروني" required><br>
+        
+        <textarea name="message" placeholder="اكتب رسالتك هنا..." rows="5" required></textarea><br>
+        
+        <button type="submit">إرسال</button>
+    </form>
+</div>
+
+</body>
+</html>
